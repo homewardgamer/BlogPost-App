@@ -1,0 +1,20 @@
+<%-include("header") -%> 
+<h1 style="padding-top: 1%;">Delete</h1>
+
+<form method="POST" action="/delete">
+    <div class="form-group">
+        <label for="exampleFormControlSelect1">Select Blog To Delete</label>
+        <select class="form-control" id="selection" name="select" required>
+            <%for(var i=0;i<arr.length;i++){%>
+                <option value="<%=arr[i]._id%>"><%=arr[i].title%></option>
+                <% } %>        
+        </select>
+      </div>
+    <div class="form-group">
+        <label for="pass">Admin Passcode</label>
+        <input type="password" name="pass" class="form-control" id="pass" placeholder="********" required>
+      </div>
+    <button type="submit" class="btn btn-primary">Post</button>
+  </form>
+
+  <%- include("footer") -%> 

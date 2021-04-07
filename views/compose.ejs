@@ -1,0 +1,24 @@
+<%-include("header") -%> 
+
+<h1 style="padding-top: 1%;padding-bottom: 1%;">New Post</h1>
+
+<form method="POST" action="/">
+    <div class="form-group">
+      <label for="head">Title</label>
+      <input type="text" name="head" class="form-control" id="head" required>
+    </div>
+    <div class="form-group">
+      <label for="data">Blog</label>
+      <textarea class="form-control" name="data" id="data" rows="3" required></textarea>
+    </div>
+    <div class="form-group">
+        <label for="pass">Admin Passcode</label>
+        <input type="password" name="pass" class="form-control" id="pass" placeholder="********" required>
+      </div>
+    <button type="submit" class="btn btn-primary">Post</button>
+  </form>
+
+
+
+
+<%- include("footer") -%> 

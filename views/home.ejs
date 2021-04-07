@@ -1,0 +1,14 @@
+<%-include("header") -%>
+
+<h1 style="padding-top: 1%;">Home</h1>
+<p><%=homeStartingContent%></p>
+
+<% for(var i=0;i<arr.length;i++) {%>
+<h1><%=arr[i].title%></h1>
+
+
+<p><%=arr[i].blog.substring(0,100)+' ...'%> <a href="/post/<%=arr[i].title%>">Read More</a></p>
+
+<% } %>
+
+<%- include("footer") -%>
